@@ -18,11 +18,13 @@ def dice():
 
             if (dice_amount_choice in ['1', '2', '3', '4', '5', '6']):
                 dice_amount_choice = int(dice_amount_choice)
-
+                total = []
                 for dice_number in range(dice_amount_choice):
                     dice_number = random.randrange(1, 7)
+                    total.append(dice_number)
                     print(f"Dice rolled! You got: {dice_number}")
                     time.sleep(1)
+                print(f"You've got: {sum(total)}!")
 
             elif (dice_amount_choice in ['one', 'two', 'three', 'four', 'five', 'six']):
 
